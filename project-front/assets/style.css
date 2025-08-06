@@ -1,0 +1,41 @@
+.iconImage img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    object-fit: contain; 
+}
+
+.navEstate{
+    justify-content: center;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.header1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0; 
+    padding: 0; 
+    z-index: 1000; 
+}
+
+.navlinks{
+
+    padding-left: 70px;
+}
+
+
+.upNav{
+    display: flex;
+    justify-content: left;
+}
+
+
+.infoContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
