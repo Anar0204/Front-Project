@@ -13,11 +13,9 @@
 .navEstate{
     justify-content: center;
     display: flex;
-    background-color: aquamarine;
 }
 
 .header1{
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
