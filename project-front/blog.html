@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Estate</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #f4f5f8;
+            margin: 0;
+        }
+        .blog-main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 48px auto;
+            gap: 48px;
+        }
+        .blog-content {
+            flex: 3;
+        }
+        .blog-sidebar {
+            flex: 1;
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+            min-width: 320px;
+        }
+        .blog-post {
+            background: #fff;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+            overflow: hidden;
+        }
+        .blog-post-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+        .blog-post-content {
+            padding: 32px;
+        }
+        .blog-post-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #232a34;
+        }
+        .blog-post-meta {
+            font-size: 1rem;
+            color: #939da6;
+            margin-bottom: 18px;
+        }
+        .blog-post-desc {
+            font-size: 1.15rem;
+            color: #232a34;
+            margin-bottom: 24px;
+        }
+        .blog-post-readmore {
+            color: #6c7ae0;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .blog-post-readmore:hover {
+            text-decoration: underline;
+        }
+        /* Sidebar widgets */
+        .sidebar-widget {
+            margin-bottom: 32px;
+        }
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #232a34;
+            margin-bottom: 18px;
+        }
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-list li {
+            margin-bottom: 12px;
+        }
+        .sidebar-list a {
+            color: #6c7ae0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .sidebar-list a:hover {
+            text-decoration: underline;
+        }
+
+        .linkN{
+        color: rgb(255, 255, 255);
+    text-decoration: none;
+    }
+
+    .linkN:hover {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .aboutText{
+        margin-top: 120px;
+    display: flex;
+    justify-content: space-around;
+    }
+
+    .blogLink{
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+
+    }
+    .blogLink:hover{
+        text-decoration: none;
+        transition: 0.5s;
+        color: red;
+        font-weight: 900;
+        
+    }
+
+    .rightAboutLinks{
+        margin-top: 10px;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- ...existing code for header/navbar if needed... -->
+     <section class="aboutHeader" style="padding-top: 10px;">
+        <header class="header1">
+        <nav class="navEstate">
+            <div class="iconImage">
+                <img src="https://estate.axiomthemes.com/wp-content/uploads/logo-header1.jpg" alt="" >
+                <hr style="width:35px; margin-left:4px; border: -0.7px solid rgb(48, 47, 47); height: 0.1x; margin: 0; margin-bottom: 12px;">
+            </div>
+            <div class="navlinks">
+                <div class="upNav">
+                    <div class="infoContainer" >
+                        <i class="fa-solid fa-location-dot" style="opacity: 0.5;color: rgb(215, 215, 215);"></i>
+                        <p style="opacity: 0.5; color: rgb(206, 206, 206);">121 King Street, NY, USA</p>
+                    </div>
+                    <div class="infoContainer">
+                        <i class="fa-solid fa-envelope" style="opacity: 0.5; color: rgb(202, 201, 201);"></i>
+                        <p style="opacity: 0.5;"><a href=""  class="contactA" style="color: rgb(204, 204, 204);">contact@yoursite.com</a></p>
+                    </div>
+                    <div class="call">
+                        <h3 style="font-family: 'Lato', sans-serif;" > <span style="opacity: 0.5;font-size: 20px; color: rgb(190, 190, 190);" >CALL US:</span> <span style="color: red; font-size: 20px;"> <a href="" class="contactA" style="color: white;">800 123 45 67</a></span></h3>
+                    </div>
+                </div>
+                <hr style="width:100%; margin-left:-6px; margin-top: -20px; border: -0.7px solid rgb(48, 47, 47); height: 0.1x; margin-bottom: 5px;">
+                <div class="downNav">
+                    <ul class="navUl">
+                        <li class="navlis">
+                            <a href="" class="linkN">Home</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">Features</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">About Us</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">Listing</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168);font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">Gallery</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168);font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">Blog</a>
+                            <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
+                        </li>
+                        <li class="navlis">
+                            <a href="" class="linkN">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="aboutText">
+        <div class="leftAboutText">
+            <h1 class="aboutHeading" style="color: white; font-size: 35px; font-weight: 900 ;">Classic With Sidebar</h1>
+        </div>
+        <div class="rightAboutLinks">
+            <a href="#" class="blogLink">Home</a> / <a href="#" class="blogLink">Blog</a>
+        </div>
+    </div>
+     </section>
+</body>
+ <script src="assets/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
