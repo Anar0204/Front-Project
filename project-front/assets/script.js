@@ -167,3 +167,13 @@ document.querySelectorAll('.navlis').forEach(function(item) {
     item.style.position = 'relative';
   }
 });
+
+
+document.getElementById('toTop')?.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, 0);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});

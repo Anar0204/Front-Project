@@ -375,6 +375,288 @@
     transition: 0.4s;
     text-decoration: none;
 }
+
+#toTop {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      background-color: #dc3545; 
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #toTop svg { width: 18px; height: 18px; }
+
+
+@keyframes toTop {
+  to { 
+      opacity: 1;
+      bottom:1rem;
+      }
+ }
+
+
+ .footer-contact-link{
+    color: white;
+    text-decoration: none;
+
+ }
+
+ .footer-contact-link:hover{
+    color: red;
+    text-decoration: none;
+    transition: 0.5s;
+ }
+
+ /* Responsive Design for Blog Page */
+ @media (max-width: 1200px) {
+    .blog-main-container {
+        max-width: 95%;
+        gap: 32px;
+    }
+    
+    .leftBlog {
+        margin-left: 20px;
+    }
+    
+    .RightBlog {
+        margin-right: 20px !important;
+    }
+ }
+
+ @media (max-width: 992px) {
+    .aboutText {
+        margin-top: 80px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .rightAboutLinks {
+        margin-top: 20px;
+    }
+    
+    section[style*="display: flex"] {
+        flex-direction: column !important;
+        padding: 0 20px;
+    }
+    
+    .leftBlog {
+        max-width: 100%;
+        margin: 20px 0 0 0;
+    }
+    
+    .RightBlog {
+        margin: 20px 0 0 0 !important;
+        order: -1;
+    }
+    
+    .blog-sidebar {
+        max-width: 100%;
+        min-width: auto;
+        margin: 0 auto 40px auto;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .navEstate {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .iconImage {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .upNav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .downNav {
+        margin-top: 20px;
+    }
+    
+    .navUl {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .navlis {
+        display: block;
+    }
+    
+    .aboutHeading {
+        font-size: 28px !important;
+    }
+    
+    .BlogCard img {
+        height: 250px;
+    }
+    
+    .blogLinks {
+        padding: 24px 20px 0 20px;
+    }
+    
+    .blogLinks h1 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-sidebar {
+        padding: 20px 15px;
+    }
+    
+    .sidebar-search input[type="text"] {
+        font-size: 0.9rem;
+    }
+    
+    .sidebar-calendar table {
+        font-size: 0.85rem;
+    }
+    
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media (max-width: 576px) {
+    .upNav .infoContainer {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .call h3 {
+        font-size: 16px !important;
+    }
+    
+    .aboutHeading {
+        font-size: 24px !important;
+    }
+    
+    .leftBlog {
+        margin: 10px 0 0 0;
+    }
+    
+    .BlogCard {
+        margin-bottom: 30px;
+    }
+    
+    .BlogCard img {
+        height: 200px;
+    }
+    
+    .blogLinks {
+        padding: 20px 15px 0 15px;
+    }
+    
+    .blogLinks h1 {
+        font-size: 1.3rem;
+    }
+    
+    .blogLinks p {
+        font-size: 0.9rem;
+    }
+    
+    .blog-sidebar {
+        min-height: auto;
+        padding: 15px 12px;
+    }
+    
+    .sidebar-title {
+        font-size: 1rem;
+    }
+    
+    .sidebar-tags a {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+    
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .insta-grid img {
+        height: 60px;
+    }
+    
+    /* Footer responsive */
+    .main-footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-col {
+        margin-bottom: 24px;
+        min-width: 100%;
+    }
+    
+    .main-footer .row:last-child {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    #toTop {
+        right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+ }
+
+ @media (max-width: 480px) {
+    section {
+        padding: 0 10px !important;
+    }
+    
+    .aboutText {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+    
+    .aboutHeading {
+        font-size: 20px !important;
+    }
+    
+    .BlogCard img {
+        height: 180px;
+    }
+    
+    .blogLinks {
+        padding: 15px 10px 0 10px;
+    }
+    
+    .blog-sidebar {
+        padding: 12px 8px;
+    }
+    
+    .sidebar-calendar th,
+    .sidebar-calendar td {
+        padding: 2px 0;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+ }
+
+ .footer-bottom-link{
+    color: rgb(99, 105, 126);
+    text-decoration: none;
+ }
+
+ .footer-bottom-link:hover{
+    color: rgb(158, 54, 54);
+    text-decoration: none;
+ }
     </style>
 </head>
 <body>
@@ -400,11 +682,11 @@
                         <h3 style="font-family: 'Lato', sans-serif;" > <span style="opacity: 0.5;font-size: 20px; color: rgb(190, 190, 190);" >CALL US:</span> <span style="color: red; font-size: 20px;"> <a href="" class="contactA" style="color: white;">800 123 45 67</a></span></h3>
                     </div>
                 </div>
-                <hr style="width:100%; margin-left:-6px; margin-top: -20px; border: -0.7px solid rgb(48, 47, 47); height: 0.1x; margin-bottom: 5px;">
+                <hr style="width:100%; margin-left:-6px; margin-top: -21px; border: -0.7px solid rgb(48, 47, 47); height: 0.1x; margin-bottom: 5px;">
                 <div class="downNav">
                     <ul class="navUl">
                         <li class="navlis">
-                            <a href="" class="linkN">Home</a>
+                            <a href="home.html" class="linkN">Home</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -412,7 +694,7 @@
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
-                            <a href="" class="linkN">About Us</a>
+                            <a href="about.html" class="linkN">About Us</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -424,7 +706,7 @@
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168);font-size: 15px"></i>
                         </li>
                         <li class="navlis">
-                            <a href="" class="linkN">Blog</a>
+                            <a href="blog.html" class="linkN">Blog</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -625,6 +907,12 @@
         </aside>
     </div>
 </section>
+<a id="toTop" class="btn btn-danger" role="button" href="#" target="_top" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+        <!--! Font Awesome Free 6.4.2  -->
+        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+    </svg>
+</a>
 <footer class="main-footer" style="background: #393646; color: #d1d1e0; padding: 64px 0 0 0; font-family: 'Lato', sans-serif;">
   <div class="container" style="max-width: 1400px; margin: 0 auto;">
     <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -634,7 +922,7 @@
         <p style="margin-bottom:18px;">We are the leading real estate and rental marketplace dedicated to empowering consumers with data.</p>
         <p style="margin-bottom:8px;"><i class="fa fa-map-marker-alt" style="color:#a3a8e7; margin-right:8px;"></i> 121 King Street, NY, USA</p>
         <p style="margin-bottom:8px;"><i class="fa fa-phone" style="color:#a3a8e7; margin-right:8px;"></i> +800 1234 56 78</p>
-        <p style="margin-bottom:8px;"><i class="fa fa-envelope" style="color:#a3a8e7; margin-right:8px;"></i> <a href="mailto:contact@yoursite.com" class="footer-contact-link">contact@yoursite.com</a></p>
+        <p style="margin-bottom:8px;"><i class="fa fa-envelope" style="color:#a3a8e7; margin-right:8px;"></i> <a href="mailto:contact@yoursite.com" class="footer-contact-link" >contact@yoursite.com</a></p>
       </div>
       <!-- From the Blog -->
       <div class="footer-col" style="flex:1; min-width:260px; margin-bottom:32px;">

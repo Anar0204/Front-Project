@@ -197,6 +197,10 @@
         .aboutImg {
             max-width: 100%;
         }
+
+        .contact-form-wrap{
+          display: none;
+        }
     }
     .blog-section {
   width: 100%;
@@ -337,6 +341,48 @@
     max-width: 370px;
   }
 }
+
+.footer-quick-links { list-style: none; padding: 0; margin: 0; }
+  .footer-quick-links li { margin-bottom: 8px; }
+  .footer-quick-links li a { color: #d1d1e0; text-decoration: none; }
+  .footer-quick-links li a:hover { color: #e15b64; text-decoration: none; }
+  .footer-bottom-link{ color: rgb(99, 105, 126); text-decoration: none; }
+  .footer-bottom-link:hover{ color: rgb(158, 54, 54); text-decoration: none; }
+
+  /* Make rows wrap and space nicely */
+  .main-footer .row { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  /* >=992px keeps current layout, below adjusts */
+  @media (max-width: 992px) {
+    .main-footer .row { justify-content: center !important; }
+    .main-footer .row:last-child {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 16px;
+    }
+    .main-footer .row:last-child > div {
+      width: 100% !important;
+      justify-content: center !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-footer .row {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    .footer-col { min-width: 100% !important; margin-bottom: 24px !important; }
+    .main-footer img[alt="Estate Logo"] { height: 48px !important; margin-right: 0 !important; }
+    .footer-quick-links li { margin: 6px 0; }
+  }
+
+  @media (max-width: 576px) {
+    .main-footer { padding-top: 40px !important; }
+    .footer-quick-links li { display: inline-block; margin: 6px 10px; }
+    .footer-bottom-link { display: inline-block; margin: 6px 10px !important; }
+  }
 .contact-section {
   width: 100%;
   background: #f4f5f8;
@@ -430,7 +476,45 @@
   }
   .contact-form-wrap {
     padding: 32px 16px;
+    display: none;
   }
+
+  .signup-updates-bar{
+    display: none;
+  }
+}
+
+.footer-blog-link{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-blog-link:hover{
+  text-decoration: none;
+  color: red;
+  transition: 0.5s;
+}
+
+.footer-comment-link{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-comment-link:hover{
+  text-decoration: none;
+  color: red;
+  transition: 0.5s;
+}
+
+.footer-contact-link{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-contact-link:hover{
+  text-decoration: none;
+  color: red;
+  transition: 0.5s;
 }
 </style>
 <body>
@@ -459,7 +543,7 @@
                 <div class="downNav">
                     <ul class="navUl">
                         <li class="navlis">
-                            <a href="" class="linkN">Home</a>
+                            <a href="home.html" class="linkN">Home</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -467,7 +551,7 @@
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
-                            <a href="" class="linkN">About Us</a>
+                            <a href="about.html" class="linkN">About Us</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -479,7 +563,7 @@
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168);font-size: 15px"></i>
                         </li>
                         <li class="navlis">
-                            <a href="" class="linkN">Blog</a>
+                            <a href="blog.html" class="linkN">Blog</a>
                             <i class="fa-solid fa-caret-down" style="color: rgb(168, 168, 168); font-size: 15px"></i>
                         </li>
                         <li class="navlis">
@@ -672,6 +756,13 @@
     </form>
   </div>
 </section>
+
+<a id="toTop" class="btn btn-danger" role="button" href="#" target="_top" title="Back to Top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+      <!--! Font Awesome Free 6.4.2  -->
+      <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+  </svg>
+</a>
 
 <!-- Footer Section -->
 <footer class="main-footer" style="background: #393646; color: #d1d1e0; padding: 64px 0 0 0; font-family: 'Lato', sans-serif;">
