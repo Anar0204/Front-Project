@@ -23,12 +23,57 @@
             flex: 3;
         }
         .blog-sidebar {
-            flex: 1;
-            background: #fff;
-            padding: 32px 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(44,62,80,0.06);
-            min-width: 320px;
+            background: #34323d;
+    color: #e1e1e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+    padding: 28px 16px;
+    min-width: 240px;
+    max-width: 260px;
+    margin-top: 20px;
+    min-height: 900px; /* Make sidebar longer */
+    display: flex;
+    flex-direction: column;
+        }
+        .sidebar-search {
+    display: flex;
+    margin-bottom: 24px;
+    position: relative;
+}
+.sidebar-search input[type="text"] {
+    width: 100%;
+    padding: 10px 38px 10px 14px;
+    border-radius: 4px;
+    border: none;
+    background: #423f4a;
+    color: #e1e1e6;
+    font-size: 1rem;
+    outline: none;
+}
+.sidebar-search button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #bdbbc7;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+}
+.sidebar-search input[type="text"]:focus {
+    background: #504d5a;
+}
+        .sidebar-widget {
+            margin-bottom: 32px;
+    border-bottom: 1px solid #423f4a;
+    padding-bottom: 24px;
+        }
+        .sidebar-widget:last-child {
+            border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
         }
         .blog-post {
             background: #fff;
@@ -70,15 +115,14 @@
             text-decoration: underline;
         }
         /* Sidebar widgets */
-        .sidebar-widget {
-            margin-bottom: 32px;
-        }
         .sidebar-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #232a34;
-            margin-bottom: 18px;
-        }
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e1e1e6;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
         .sidebar-list {
             list-style: none;
             padding: 0;
@@ -86,17 +130,98 @@
         }
         .sidebar-list li {
             margin-bottom: 12px;
+    color: #bdbbc7;
+    font-size: 1rem;
         }
         .sidebar-list a {
-            color: #6c7ae0;
+            color: #bdbbc7;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
         }
         .sidebar-list a:hover {
+            color: #fff;
             text-decoration: underline;
         }
+        .sidebar-meta {
+    font-size: 0.95rem;
+    color: #939da6;
+}
+.sidebar-author {
+    color: #e74c3c;
+    font-weight: 600;
+}
+.sidebar-date {
+    color: #6c7ae0;
+}
+.sidebar-calendar {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+.sidebar-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #bdbbc7;
+    font-size: 0.98rem;
+}
+.sidebar-calendar th,
+.sidebar-calendar td {
+    text-align: center;
+    padding: 4px 0;
+    width: 32px;
+    height: 32px;
+}
+.sidebar-calendar th {
+    color: #939da6;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+.sidebar-calendar td.active {
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    background: #423f4a;
+    color: #fff;
+}
+.sidebar-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.sidebar-tags a {
+    background: #423f4a;
+    color: #e1e1e6;
+    text-decoration: none;
+    font-size: 0.98rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 6px;
+}
+.sidebar-tags a:hover {
+    background: #6c7ae0;
+    color: #fff;
+}
+.sidebar-instagram {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+.insta-grid img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 2px;
+    background: #23222a;
+    display: block;
+}
 
-        .linkN{
+    .linkN{
         color: rgb(255, 255, 255);
     text-decoration: none;
     }
@@ -127,9 +252,129 @@
     }
 
     .rightAboutLinks{
-        margin-top: 10px;
+        margin-top: 40px;
     }
-    
+
+    .leftBlog {
+        max-width: 760px;
+        margin: 0 auto 0 0;
+        /* aligns left, centers in main container */
+    }
+    .BlogCard {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+        overflow: hidden;
+        margin-bottom: 40px;
+        padding-bottom: 24px;
+    }
+    .BlogCard img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: block;
+    }
+    .blogLinks {
+        padding: 32px 32px 0 32px;
+    }
+    .blogLinks p {
+        font-size: 0.98rem;
+        color: #939da6;
+        margin-bottom: 18px;
+        margin-top: 0;
+        letter-spacing: 0.2px;
+    }
+    .blogLinks p a {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 4px;
+    }
+    .blogLinks p a:hover {
+        text-decoration: underline;
+        color: #6c7ae0;
+    }
+    .blogLinks h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 12px;
+        color: #232a34;
+        margin-top: 0;
+    }
+    .blogLinks h1 a {
+        color: #232a34;
+        text-decoration: none;
+    }
+    .blogLinks h1 a:hover {
+        color: #6c7ae0;
+        text-decoration: underline;
+    }
+    .blogLinks > p:last-of-type {
+        font-size: 1.15rem;
+        color: #232a34;
+        margin-bottom: 24px;
+        margin-top: 0;
+    }
+    .vDetails {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .vDetails i {
+        font-size: 1.1rem;
+        margin-right: 4px;
+    }
+    .vDetails p {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .vDetails a {
+        color: #6c7ae0;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 2px 10px;
+        border-radius: 4px;
+        transition: background 0.2s;
+        background: #f4f5f8;
+        margin-left: 2px;
+    }
+    .vDetails a:hover {
+        background: #e6e8f7;
+        color: #e74c3c;
+        text-decoration: underline;
+    }
+
+    .leftBlog {
+    max-width: 760px;
+    margin: 0 auto 0 0;
+    justify-content: center;
+    margin-left: 95px;
+    margin-top: 20px;
+}
+.footer-comment-link{
+    color: red;
+    text-decoration: none;
+}
+
+.footer-comment-link:hover{
+    color: #6c7ae0;;
+    transition: 0.4s;
+}
+
+.footer-blog-link{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-blog-link:hover{
+    color: red;;
+    transition: 0.4s;
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
@@ -199,7 +444,276 @@
             <a href="#" class="blogLink">Home</a> / <a href="#" class="blogLink">Blog</a>
         </div>
     </div>
-     </section>
+</section>
+
+<section  style="display: flex;">
+
+    <div class="leftBlog">
+        <div class="BlogCard">
+            <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-1170x659.jpg" alt="">
+            <div class="blogLinks">
+                <p>in <a href="">Classic With Sidebar</a> / by <a href="">Jesse Doe</a> On <a href="">February 16, 2016</a> / <a href="">3 Comments</a></p>
+                <h1><a href=""></a></h1>
+                <p>Lorem ipsum dolor sit amet, quis tation ius ut,
+                     sea paulo civibus efficiendi at. Per ei essent discere vituperatoribus,
+                      cum ei ornatus adversarium, vix alia ignota ei. Sea te veri mentitum necessitatibus,
+                     ut falli dicunt hendrerit ius. Ei novum...</p>
+                     <div class="vDetails">
+                        <i class="fa-solid fa-play" style="color: red;"></i> <p><a href="">View details</a></p>
+                     </div>
+            </div>
+        </div>
+        <div class="BlogCard">
+            <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-1170x659.jpg" alt="">
+            <div class="blogLinks">
+                <p>in <a href="">Classic With Sidebar</a> / by <a href="">Jesse Doe</a> On <a href="">February 16, 2016</a> / <a href="">3 Comments</a></p>
+                <h1><a href=""></a></h1>
+                <p>Lorem ipsum dolor sit amet, quis tation ius ut,
+                     sea paulo civibus efficiendi at. Per ei essent discere vituperatoribus,
+                      cum ei ornatus adversarium, vix alia ignota ei. Sea te veri mentitum necessitatibus,
+                     ut falli dicunt hendrerit ius. Ei novum...</p>
+                     <div class="vDetails">
+                        <i class="fa-solid fa-play" style="color: red;"></i> <p><a href="">View details</a></p>
+                     </div>
+            </div>
+        </div>
+        <div class="BlogCard">
+            <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-1170x659.jpg" alt="">
+            <div class="blogLinks">
+                <p>in <a href="">Classic With Sidebar</a> / by <a href="">Jesse Doe</a> On <a href="">February 16, 2016</a> / <a href="">3 Comments</a></p>
+                <h1><a href=""></a></h1>
+                <p>Lorem ipsum dolor sit amet, quis tation ius ut,
+                     sea paulo civibus efficiendi at. Per ei essent discere vituperatoribus,
+                      cum ei ornatus adversarium, vix alia ignota ei. Sea te veri mentitum necessitatibus,
+                     ut falli dicunt hendrerit ius. Ei novum...</p>
+                     <div class="vDetails">
+                        <i class="fa-solid fa-play" style="color: red;"></i> <p><a href="">View details</a></p>
+                     </div>
+            </div>
+        </div>
+        <div class="BlogCard">
+            <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-1170x659.jpg" alt="">
+            <div class="blogLinks">
+                <p>in <a href="">Classic With Sidebar</a> / by <a href="">Jesse Doe</a> On <a href="">February 16, 2016</a> / <a href="">3 Comments</a></p>
+                <h1><a href=""></a></h1>
+                <p>Lorem ipsum dolor sit amet, quis tation ius ut,
+                     sea paulo civibus efficiendi at. Per ei essent discere vituperatoribus,
+                      cum ei ornatus adversarium, vix alia ignota ei. Sea te veri mentitum necessitatibus,
+                     ut falli dicunt hendrerit ius. Ei novum...</p>
+                     <div class="vDetails">
+                        <i class="fa-solid fa-play" style="color: red;"></i> <p><a href="">View details</a></p>
+                     </div>
+            </div>
+        </div>
+        <div class="BlogCard">
+            <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-1170x659.jpg" alt="">
+            <div class="blogLinks">
+                <p>in <a href="">Classic With Sidebar</a> / by <a href="">Jesse Doe</a> On <a href="">February 16, 2016</a> / <a href="">3 Comments</a></p>
+                <h1><a href=""></a></h1>
+                <p>Lorem ipsum dolor sit amet, quis tation ius ut,
+                     sea paulo civibus efficiendi at. Per ei essent discere vituperatoribus,
+                      cum ei ornatus adversarium, vix alia ignota ei. Sea te veri mentitum necessitatibus,
+                     ut falli dicunt hendrerit ius. Ei novum...</p>
+                     <div class="vDetails">
+                        <i class="fa-solid fa-play" style="color: red;"></i> <p><a href="">View details</a></p>
+                     </div>
+            </div>
+        </div>
+    </div>
+    <div class="RightBlog" style="margin-right: 144px;">
+        <aside class="blog-sidebar">
+            <form class="sidebar-search">
+                <input type="text" placeholder="Search ..." />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">Categories</div>
+                <ul class="sidebar-list">
+                    <li><a href="#">Classic With Sidebar</a> (15)</li>
+                    <li><a href="#">Classic Without Sidebar</a> (15)</li>
+                    <li><a href="#">Gallery</a> (12)</li>
+                    <li><a href="#">Masonry 2 columns</a> (15)</li>
+                    <li><a href="#">Masonry 3 columns</a> (15)</li>
+                    <li><a href="#">New properties</a> (3)</li>
+                    <li><a href="#">Portfolio 2 columns</a> (15)</li>
+                    <li><a href="#">Portfolio 3 columns</a> (15)</li>
+                    <li><a href="#">Post Formats</a> (10)</li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">Recent Posts</div>
+                <ul class="sidebar-list">
+                    <li>
+                        <a href="#">Making the Most of Your Small Space with Furniture</a><br>
+                        <span class="sidebar-meta">by <span class="sidebar-author">Jesse Doe</span> on <span class="sidebar-date">March 9, 2016</span></span>
+                    </li>
+                    <li>
+                        <a href="#">4 Ways to Decorate Your First Apartment on a Budget</a><br>
+                        <span class="sidebar-meta">by <span class="sidebar-author">Jesse Doe</span> on <span class="sidebar-date">March 9, 2016</span></span>
+                    </li>
+                    <li>
+                        <a href="#">How to Infuse Your Space with Natural Light</a><br>
+                        <span class="sidebar-meta">by <span class="sidebar-author">Jesse Doe</span> on <span class="sidebar-date">March 9, 2016</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">Archives</div>
+                <ul class="sidebar-list">
+                    <li><a href="#">March 2016</a> (3)</li>
+                    <li><a href="#">February 2016</a> (104)</li>
+                    <li><a href="#">December 2015</a> (3)</li>
+                    <li><a href="#">November 2015</a> (2)</li>
+                    <li><a href="#">September 2015</a> (1)</li>
+                    <li><a href="#">August 2015</a> (1)</li>
+                    <li><a href="#">July 2015</a> (1)</li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">August 2025</div>
+                <div class="sidebar-calendar">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>M</th>
+                                <th>T</th>
+                                <th>W</th>
+                                <th>T</th>
+                                <th>F</th>
+                                <th>S</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td></td><td> </td><td> </td><td> </td><td> </td><td>1</td><td>2</td><td>3</td></tr>
+                            <tr><td></td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                            <tr><td></td><td class="active">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                            <tr><td></td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                            <tr><td></td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">Tags</div>
+                <div class="sidebar-tags">
+                    <a href="#">Attic</a>
+                    <a href="#">Basement</a>
+                    <a href="#">Bedroom</a>
+                    <a href="#">Commute</a>
+                    <a href="#">Driveway</a>
+                    <a href="#">Features</a>
+                    <a href="#">Garage</a>
+                    <a href="#">Kitchen</a>
+                    <a href="#">Living Room</a>
+                </div>
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-title">Instagram</div>
+                <div class="sidebar-instagram">
+                    <div class="insta-grid">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-1-370x208.jpg" alt="Instagram 1">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-2-370x208.jpg" alt="Instagram 2">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-3-370x208.jpg" alt="Instagram 3">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-4-370x208.jpg" alt="Instagram 4">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-5-370x208.jpg" alt="Instagram 5">
+                        <img src="https://estate.axiomthemes.com/wp-content/uploads/image-6-370x208.jpg" alt="Instagram 6">
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+<footer class="main-footer" style="background: #393646; color: #d1d1e0; padding: 64px 0 0 0; font-family: 'Lato', sans-serif;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto;">
+    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+      <!-- Contacts -->
+      <div class="footer-col" style="flex:1; min-width:260px; margin-bottom:32px;">
+        <h3 style="color:#fff; font-size:1.2rem; font-weight:600; margin-bottom:18px;">CONTACTS</h3>
+        <p style="margin-bottom:18px;">We are the leading real estate and rental marketplace dedicated to empowering consumers with data.</p>
+        <p style="margin-bottom:8px;"><i class="fa fa-map-marker-alt" style="color:#a3a8e7; margin-right:8px;"></i> 121 King Street, NY, USA</p>
+        <p style="margin-bottom:8px;"><i class="fa fa-phone" style="color:#a3a8e7; margin-right:8px;"></i> +800 1234 56 78</p>
+        <p style="margin-bottom:8px;"><i class="fa fa-envelope" style="color:#a3a8e7; margin-right:8px;"></i> <a href="mailto:contact@yoursite.com" class="footer-contact-link">contact@yoursite.com</a></p>
+      </div>
+      <!-- From the Blog -->
+      <div class="footer-col" style="flex:1; min-width:260px; margin-bottom:32px;">
+        <h3 style="color:#fff; font-size:1.2rem; font-weight:600; margin-bottom:18px;">FROM THE BLOG</h3>
+        <div style="margin-bottom:16px; display:flex; align-items:center;">
+          <img src="https://estate.axiomthemes.com/wp-content/uploads/image-14-1-50x50.jpg" alt="Blog 1" style="width:48px; height:48px; border-radius:6px; margin-right:12px;">
+          <div>
+            <a href="#" class="footer-blog-link">Making the Most of Your Small Space with Furniture</a><br>
+            <span style="color:#a3a8e7; font-size:0.95rem;">by <a href="#" class="jD">JESSE DOE</a> on MARCH 9, 2016</span>
+          </div>
+        </div>
+        <div style="margin-bottom:16px; display:flex; align-items:center;">
+          <img src="https://estate.axiomthemes.com/wp-content/uploads/image-15-1-50x50.jpg" alt="Blog 2" style="width:48px; height:48px; border-radius:6px; margin-right:12px;">
+          <div>
+            <a href="#" class="footer-blog-link">4 Ways to Decorate Your First Apartment on a Budget</a><br>
+            <span style="color:#a3a8e7; font-size:0.95rem;">by <a href="#" class="jD">JESSE DOE</a> on MARCH 9, 2016</span>
+          </div>
+        </div>
+        <div style="margin-bottom:16px; display:flex; align-items:center;">
+          <img src="https://estate.axiomthemes.com/wp-content/uploads/image-13-1-50x50.jpg" alt="Blog 3" style="width:48px; height:48px; border-radius:6px; margin-right:12px;">
+          <div>
+            <a href="#" class="footer-blog-link">How to Infuse Your Space with Natural Light</a><br>
+            <span style="color:#a3a8e7; font-size:0.95rem;">by <a href="#" class="jD">JESSE DOE</a> on MARCH 9, 2016</span>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-col" style="flex:1; min-width:180px; margin-bottom:32px;">
+        <h3 style="color:#fff; font-size:1.2rem; font-weight:600; margin-bottom:18px;">QUICK LINKS</h3>
+        <ul class="footer-quick-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">LISTING</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+      </div>
+      <!-- Recent Comments -->
+      <div class="footer-col" style="flex:1; min-width:260px; margin-bottom:32px;">
+        <h3 style="color:#fff; font-size:1.2rem; font-weight:600; margin-bottom:18px;">RECENT COMMENTS</h3>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li style="margin-bottom:10px; color:#d1d1e0;"><span style="color:#a3a8e7;">John Doe</span> on <a href="#" class="footer-comment-link">Classic Black, White and Gold Interiors</a></li>
+          <li style="margin-bottom:10px; color:#d1d1e0;"><span style="color:#a3a8e7;">Mike Newton</span> on <a href="#" class="footer-comment-link">Classic Black, White and Gold Interiors</a></li>
+          <li style="margin-bottom:10px; color:#d1d1e0;"><span style="color:#a3a8e7;">Martha Stewart</span> on <a href="#" class="footer-comment-link">Which Area Rug Material is Right for Your Apartment?</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Lower Footer -->
+    <div class="row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; border-top: 1px solid #444; margin-top: 48px; padding-top: 32px;">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <img src="https://estate.axiomthemes.com/wp-content/uploads/logo-footer.jpg" alt="Estate Logo" style="height:60px; margin-right:24px;">
+        <div>
+          <h3 style="color:#fff; font-size:1.1rem; font-weight:600; margin-bottom:10px;">ABOUT US</h3>
+          <p style="margin:0; color:#d1d1e0; font-size:1rem; max-width:400px;">We are the leading real estate and rental marketplace dedicated to empowering consumers with data, inspiration and knowledge around the place they call home, and connecting them with the best local professionals who can help.</p>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <h3 style="color:#fff; font-size:1.1rem; font-weight:600; margin-bottom:10px;">FOLLOW US</h3>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-behance"></i></a>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-dribbble"></i></a>
+        <a href="#" style="color:#d1d1e0; font-size:2rem; margin-right:8px;"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 32px; padding-bottom: 24px; font-size:0.95rem; color:#d1d1e0;">
+      <div>
+        <span style="color:#e15b64;">AxiomThemes</span> © 2025 All Rights Reserved
+      </div>
+      <div>
+        <a href="#" class="footer-bottom-link" style="margin-right:16px;">Disclaimer</a>
+        <a href="#" class="footer-bottom-link" style="margin-right:16px;">Privacy</a>
+        <a href="#" class="footer-bottom-link" style="margin-right:16px;">Advertisement</a>
+        <a href="#" class="footer-bottom-link">Contact us</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
  <script src="assets/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
